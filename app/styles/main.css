@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+html {overflow-y: scroll}
+body{margin:0px; padding:0px; font-family:"微软雅黑"; color:#888; overflow-x:hidden;padding-top: 50px;}
+a{color:#707070; text-decoration:none; outline:none;}
+a:active{star:expression(this.onFocus=this.blur());} 
+img{border:0px;}
+a:link {text-decoration: none; outline:none;}
+a:visited{text-decoration: none; outline:none;}
+a:hover{text-decoration:none; color:#1c5a97; outline:none;}
+ul, p, dl, dt, dd{padding:0px; margin:0px;}
+li{list-style-position:outside; list-style-type:none;}
+h1, h2, h3, h4, h5{font-size:14px; padding:0px; margin:0px;}
+h1{font-size:16px;}
+h5{font-size:12px;}
+.fl{float:left;}
+.fr{float:right;}
+.clear_f{clear:both; height:0px; padding:0px; margin:0px; display:block; _display:inherit;}
+.h10{height:10px; overflow:hidden; clear:both;}
+.h20{height:20px; overflow:hidden; clear:both;}
+.h50{height:50px; overflow:hidden; clear:both;}
+
+.wal{width:980px; margin:0px auto; overflow:visible;}
+.red{color:#d80312;}
+
+a, .aboutPart2 li{
+    -webkit-transition: 0.5s ease-out;
+    -moz-transition: 0.5s ease-out;
+    -ms-transition: 0.5s ease-out;
+    -o-transition: 0.5s ease-out;
+    transition: 0.5s ease-out;
+	}		
+	
+.footNav{height:209px; overflow:hidden; background:#181818; font-family:"微软雅黑";}
+.footNav .fl li{float:left; width:113px; overflow:hidden;}
+.footNav .fl h5{font-weight:100; padding:50px 0 15px 0;}
+.footNav .fl h5 a{color:#c0c0c0;}
+.footNav .fl .content{line-height:25px;}
+.footNav .fl a{color:#767676;}
+.footNav .fl a:hover, .footNav .fl h5 a:hover{color:#c51306;}
+.footNav .fr{padding-top:43px;}
+.footNav .fr li{float:left; width:96px; overflow:hidden; text-align:center; margin-right:5px; background:#1f1f1f; padding:10px 13px; color:#c0c0c0;}
+.footNav .fr .name{padding-bottom:6px;}
+.footDiv{height:151px; overflow:hidden; background:#181818; border-top:#2c2c2c solid 1px;}	
+.footDiv .wal{height:150px; width:595px; position:relative;}
+.footDiv .msg{text-align:right; padding-top:33px;}
+.footDiv .msg img{position:relative; top:6px;}
+.footDiv a{color:#c0c0c0;}
+
+.topA{display:none; opacity:0.75; filter:Alpha(opacity=60);cursor:pointer; width:48px; height:48px; overflow:hidden; position:fixed; z-index:100; right:10px; bottom:10px; line-height: 48px; background: #b9b9b9; color: #FFF; text-align: center; transition: all 1s;}
+.topA:hover{background: #c20808; color: #FFF; opacity:1}

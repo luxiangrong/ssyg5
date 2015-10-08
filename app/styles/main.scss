@@ -1342,6 +1342,9 @@ body.aboutus {
           &:hover {
             background: url(../images/bg01.png);
           }
+          .col-xs-6 {
+            transition: all 0.5s;
+          }
           .col-xs-6:hover {
             background-color: rgba(0,0,0,0.5);
             color: #f39924;
@@ -1362,12 +1365,13 @@ body.aboutus {
           text-decoration: none;
           display: block;
           text-align: center;
-          font-size: 24px;
+          font-size: 36px;
           color: inherit;
           line-height: 220px;
           transition: all 0.5s;
           letter-spacing: 0;
           word-spacing: 0;
+          white-space: nowrap;
         }
         a.normal-item {
           color: inherit;
@@ -1392,7 +1396,8 @@ body.aboutus {
             margin-top: 0;
           }
         }
-        &:hover {
+        &:hover,
+        &.active {
           background: #f39924;
           color: #ffffff;
         }
@@ -1444,11 +1449,60 @@ body.aboutus {
     background-size: conver;
     .container {
       position: relative;
+      height: 100%;
+    }
+    a.arraw {
+      width: 43px;
+      height: 84px;
+      margin-top: -42px;
+      position: absolute;
+      top: 50%;
+      cursor: pointer;
+      &.prev {
+        background: url(../images/pic08.png);
+        left: -70px;
+      }
+      &.next {
+        background: url(../images/pic09.png);
+        right: -70px;
+      }
+    }
+    .nav {
+      text-align: center;
+      padding-top: 50px;
+      ul {
+        li {
+          display: inline-block;
+          a {
+            position: relative;
+            border-bottom: 4px solid #ffffff;
+            color: #ffffff;
+            font-size: 16px;
+            @include opacity(0.5);
+            padding: 0 20px;
+            text-decoration: none;
+            transition: all 0.3s;
+            top: 0px;
+            &:hover {
+              @include opacity(1);
+              border-bottom-width: 8px;
+              top: -4px;
+            }
+          }
+          &.active {
+            a {
+              @include opacity(1);
+              border-bottom-width: 8px;
+              top: -4px;
+            }
+          }
+        }
+      }
     }
     .mac {
       position: absolute;
       left: 0px;
-      bottom: -570px;
+      bottom: -60px;
       width: 576px;
       height: 439px;
       overflow: hidden;
@@ -1461,6 +1515,11 @@ body.aboutus {
         height: 299px;
         left: 23px;
         top: 23px;
+        @include opacity(0);
+        transition: all 0.5s;
+        &.active {
+          @include opacity(1);
+        }
         .title {
           background:transparent url('../images/bg01.png') left top;
           width: 100%;
@@ -1480,6 +1539,11 @@ body.aboutus {
       right: 0px;
       top: 150px;
       color: #ffffff;
+      @include opacity(0);
+        transition: all 0.5s;
+        &.active {
+          @include opacity(1);
+        }
       h1 {
         font-size: 30px;
         font-weight: bold;

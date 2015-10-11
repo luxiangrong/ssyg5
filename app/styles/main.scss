@@ -1325,6 +1325,8 @@ body.aboutus {
         transition: all 0.5s;
         border-top: 1px solid #898989;
         border-right: 1px solid #898989;
+        transition: all 0.5s;
+        transform: rotateY(0);
         @media (max-width: 1500px) {
           width: 25%;
         }
@@ -1416,22 +1418,48 @@ body.aboutus {
       margin: 0 auto;
       text-align: center;
       padding-top: 20px;
+      position: relative;
       h1 {
         font-size: 48px;
         font-weight: normal;
+        z-index: 1;
+        position: relative;
       }
       p {
         font-size: 20px;
+        z-index: 1;
+        position: relative;
       }
       &.color-label-1 {
-        background: url(../images/pic11.png) no-repeat 76% bottom;
+        background: url(../images/pic20.png) no-repeat 76% bottom;
       }
       &.color-label-2 {
-        background: url(../images/pic12.png) no-repeat 76% bottom;
+        background: url(../images/pic20.png) no-repeat 76% bottom;
         color: #71ba2a;
       }
       &.color-label-3 {
-        background: url(../images/pic13.png) no-repeat 76% bottom;
+        background: url(../images/pic20.png) no-repeat 76% bottom;
+      }
+      .bg-wrap  {
+        position: absolute;
+        left: 111px;
+        top: 0px;
+        width: 164px;
+        height: 164px;
+        z-index: 2;
+        .bg {
+          width: 100%;
+          height: 100%;
+          display: inline-block;
+          transform: rotateZ(0deg);
+          transition: all 0.3s;
+          cursor: pointer;
+        }
+        &:hover {
+          .bg {
+            transform: rotateZ(90deg);
+          }
+        }
       }
     }
     .description {

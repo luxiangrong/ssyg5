@@ -132,11 +132,13 @@
                 <a class="single-text " href="">News</a>
             </div>
             <div class="col-xs-item col-xs-item-half">
-                <div class="col-xs-6 br">
+                <div class="col-xs-6 br active">
                     <a class="half-single-text company" href="">公司动态</a>
+                    <a href="" class="more">更多&gt;&gt;</a>
                 </div>
                 <div class="col-xs-6">
                     <a class="half-single-text industry" href="">行业动态</a>
+                    <a href="" class="more">更多&gt;&gt;</a>
                 </div>
             </div>
             <div class="col-xs-item item-news">
@@ -426,12 +428,12 @@
                 <div class="detail active" data-year="2014">
                     <h1>2014年北戴河避暑</h1>
                     <p>在这几年的发展探索中，盛世阳光秉持"拒绝平凡"的理念，致力于企业互动营销设计领域，提供网站建设与维护、多媒体设计制作等服务。目前已形成一套科学、完整、高效的项目运作体系，凭借高品位的设计风格、精湛的技术水平，为不同客户提供定制化的服务。</p>
-                    <a href="" class="btn btn-a">活动详情</a>
+                    <a href="2014.html" class="btn btn-a">活动详情</a>
                 </div>
                 <div class="detail" data-year="2013">
                     <h1>2013年北戴河避暑</h1>
                     <p>在这几年的发展探索中，盛世阳光秉持"拒绝平凡"的理念，致力于企业互动营销设计领域，提供网站建设与维护、多媒体设计制作等服务。目前已形成一套科学、完整、高效的项目运作体系，凭借高品位的设计风格、精湛的技术水平，为不同客户提供定制化的服务。</p>
-                    <a href="" class="btn btn-a">活动详情</a>
+                    <a href="2013.html" class="btn btn-a">活动详情</a>
                 </div>
                 <div class="detail" data-year="2012">
                     <h1>2012年北戴河避暑</h1>
@@ -655,6 +657,8 @@
         $('.half-single-text.company').on('click', function(e){
             e.preventDefault();
             $('.item-news').css('transform', 'rotateY(0deg)');
+            $(this).closest('.col-xs-item-half').find('.col-xs-6').removeClass('active');
+            $(this).closest('.col-xs-6').addClass('active');
             setTimeout(function(){
                 $('.item-news .company').show();
                 $('.item-news .industry').hide();
@@ -663,6 +667,8 @@
         $('.half-single-text.industry').on('click', function(e){
             e.preventDefault();
             $('.item-news').css('transform', 'rotateY(360deg)');
+            $(this).closest('.col-xs-item-half').find('.col-xs-6').removeClass('active');
+            $(this).closest('.col-xs-6').addClass('active');
             setTimeout(function(){
                 $('.item-news .industry').show();
                 $('.item-news .company').hide();

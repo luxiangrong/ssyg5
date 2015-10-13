@@ -1211,41 +1211,7 @@ hr {
   
 }
 
-.icon-32 {
-  width: 32px;
-  height: 32px;
-  display: inline-block;
-  background:url(../images/icon_sprite_32.png) no-repeat;
-  vertical-align: middle;
-}
 
-.icon-32 {
-  *display: inline-block;
-}
-
-.icon-32.icon-a {
-  background-position: 0 0;
-}
-
-.icon-32.icon-b {
-  background-position: 0 -57px;
-}
-
-.icon-32.icon-c {
-  background-position: 0 -110px;
-}
-
-.icon-32.icon-d {
-  background-position: 0 -162px;
-}
-
-.icon-32.icon-e {
-  background-position: 0 -215px;
-}
-
-.icon-32.icon-e {
-  background-position: 0 -265px;
-}
 
 body.aboutus {
   background-color: #fff;
@@ -1341,12 +1307,19 @@ body.aboutus {
 
         &.col-xs-item-half {
           padding: 0;
+          a.more {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+            color: rgba(255,255,255,0.7);
+          }
           &:hover {
             background: url(../images/bg01.png);
           }
           .col-xs-6 {
             transition: all 0.5s;
           }
+          .col-xs-6.active,
           .col-xs-6:hover {
             background-color: rgba(0,0,0,0.5);
             color: #f39924;
@@ -1374,6 +1347,8 @@ body.aboutus {
           letter-spacing: 0;
           word-spacing: 0;
           white-space: nowrap;
+          position: relative;
+
         }
         a.normal-item {
           color: inherit;
@@ -1396,6 +1371,9 @@ body.aboutus {
             font-weight: normal;
             color: #ffffff;
             margin-top: 0;
+          }
+          &.industry {
+            display: none;
           }
         }
         &:hover,
@@ -1475,6 +1453,7 @@ body.aboutus {
     height: 524px;
     background:transparent url('../images/pic14.jpg') center center no-repeat;
     background-size: conver;
+    overflow: hidden;
     .container {
       position: relative;
       height: 100%;
@@ -1567,9 +1546,11 @@ body.aboutus {
       right: 0px;
       top: 150px;
       color: #ffffff;
+      display: none;
       @include opacity(0);
         transition: all 0.5s;
         &.active {
+          display: block;
           @include opacity(1);
         }
       h1 {

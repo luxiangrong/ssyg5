@@ -1217,6 +1217,10 @@ body.aboutus {
   background-color: #fff;
   padding-top: 50px;
 
+  a {
+    outline: none;
+  }
+
   #slick-team {
     .slick-slide, a {
       outline-style: none;
@@ -1348,6 +1352,7 @@ body.aboutus {
           word-spacing: 0;
           white-space: nowrap;
           position: relative;
+          outline: none;
 
         }
         a.normal-item {

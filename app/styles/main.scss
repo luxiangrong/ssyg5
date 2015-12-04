@@ -1458,7 +1458,7 @@ body.aboutus {
     height: 524px;
     background:transparent url('../images/pic14.jpg') center center no-repeat;
     background-size: conver;
-    overflow: hidden;
+    overflow: visible;
     .container {
       position: relative;
       height: 100%;
@@ -1579,12 +1579,14 @@ body.aboutus {
       left: 0;
       height: 0;
       width: 100%;
+      z-index: 10;
     }
     .container {
       position: relative;
       height: 100%;
       .contact-info {
         position: absolute;
+        z-index: 11;
         left:0;
         top: 0;
         height: 100%;

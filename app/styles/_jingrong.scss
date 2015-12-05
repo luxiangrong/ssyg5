@@ -1,0 +1,212 @@
+.page-jingrong {
+    padding-top: 50px;
+    background-color: #f0f0f0;
+    .banner {
+        .banner-slick {
+            margin-bottom: 0;
+            .slick-slide {
+                outline: none;
+                a,
+                img {
+                    outline: none;
+                }
+            }
+            .slick-arrow {
+                width: 42px;
+                height: 82px;
+                margin-top: -41px;
+                z-index: 1000;
+                @include opacity(0.38);
+                &:hover {
+                    @include opacity(0.75);
+                }
+                &.slick-next {
+                    right: 50px;
+                    background: url(../images/p01.png) no-repeat center center;
+                    &:before {
+                        content: '';
+                    }
+                }
+                &.slick-prev {
+                    left: 50px;
+                    background: url(../images/p02.png) no-repeat center center;
+                    &:before {
+                        content: '';
+                    }
+                }
+            }
+        }
+    }
+    .fetures {
+        background-color: #FFF;
+        padding-bottom: 30px;
+        h2 {
+            text-align: center;
+            font-size: 30px;
+            color: #2c2c2c;
+            small {
+                display: block;
+                font-size: 15px;
+                margin-top: 15px;
+                line-height: 1.8;
+            }
+        }
+        .feture-item {
+            text-align: center;
+            margin-top: 50px;
+            .icon-wrap {
+                position: relative;
+                width: 174px;
+                height: 174px;
+                margin: 0 auto;
+                cursor: pointer;
+                .circle {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: url(../images/p03.png) no-repeat center center;
+                    transform: rotateZ(0deg);
+                    transition: all 0.5s;
+                    z-index: 10;
+                }
+                .icon {
+                    width: 146px;
+                    height: 146px;
+                    line-height: 126px;
+                    border: 1px solid #e8e8e8;
+                    margin: 0 auto;
+                    border-radius: 73px;
+                    position: relative;
+                    top: 15px;
+                    background-color: #fff;
+                    transition: all 0.5s;
+                    font-weight: normal;
+                    .iconfont {
+                        font-size: 96px;
+                        color: #898989;
+                        margin-top: -10px;
+                        transition: all 0.5s;
+                    }
+                }
+                &:hover {
+                    .icon {
+                        background-color: #a47c61;
+                        .iconfont {
+                            color: #fff;
+                            @include opacity(0.75);
+                        }
+                    }
+                    .circle {
+                        transform: rotateZ(90deg);
+                    }
+                }
+            }
+            h3 {
+                text-align: center;
+                font-size: 24px;
+                color: #6c6c6c;
+                font-weight: normal;
+                margin-top: 40px;
+            }
+            p {
+                margin-top: 20px;
+                font-size: 14px;
+                color: #2c2c2c;
+                text-align: center;
+            }
+        }
+    }
+    .advantage {
+        background-color: #f0f0f0;
+        h2 {
+            text-align: center;
+            color: #474747;
+            font-size: 30px;
+            font-weight: normal;
+            margin-top: 30px;
+            small {
+                font-size: 15px;
+                display: block;
+                margin: 20px 0;
+            }
+        }
+        img {
+            display: block;
+            margin: 30px auto;
+        }
+    }
+    .cases {
+    	margin-bottom: 50px;
+        .row {
+            margin: 0;
+        }
+        .case {
+            padding: 0px;
+            .padding-patch {
+                padding: 10px;
+                .wrap {
+                    position: relative;
+                    width: 360px;
+                    height: 271px;
+                    overflow: hidden;
+                    .size {
+                        /* 广阔的海洋 */
+                        width: 1000px;
+                        height: 1000px;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        margin: -500px 0 0 -500px;
+                        /* 水平居中 */
+                        text-align: center;
+                        img {
+                            margin: 0 auto;
+                            transition: all 0.3s;
+                            vertical-align: middle;  
+                            width: 360px;
+                            height: 271px;
+                        }
+                        .middle {
+                            /* 垂直居中 */
+                            display: inline-block;
+                            width: 0;
+                            height: 100%;
+                            vertical-align: middle;
+                        }
+                    }
+                    p {
+                        background-color: rgba(0, 0, 0, 0.5);
+                        background: url(../images/a50.png) left top;
+                        text-align: center;
+                        color: #fff;
+                        position: absolute;
+                        left: 0;
+                        bottom: 0;
+                        width: 100%;
+                        line-height: 30px;
+                        margin: 0;
+                        @include opacity(0);
+                        transition: all 0.3s;
+                    }
+                }
+            }
+            &:hover {
+                .padding-patch {
+                    .wrap {
+                        p {
+                            @include opacity(1);
+                        }
+                        .size {
+                            img {
+                                transform: scale(1.05);
+                                zoom: 1.05;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

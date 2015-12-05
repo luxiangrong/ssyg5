@@ -9,6 +9,8 @@ $font-family-serif: Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace !default;
 $grid-gutter-width: 0px !default;
 
+@import "iconfont";
+
 /*!
  * Bootstrap v3.1.1 (http://getbootstrap.com)
  * Copyright 2011-2014 Twitter, Inc.
@@ -1608,3 +1610,5 @@ body.aboutus {
     }
   }
 }
+
+@import "jingrong";

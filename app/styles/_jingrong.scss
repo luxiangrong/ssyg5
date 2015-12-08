@@ -9,6 +9,7 @@
                 a,
                 img {
                     outline: none;
+                    width: 100%;
                 }
             }
             .slick-arrow {
@@ -201,8 +202,8 @@
                         }
                         .size {
                             img {
-                                transform: scale(1.05);
-                                zoom: 1.05;
+                                transform: scale(1.2);
+                                zoom: 1.2;
                             }
                         }
                     }

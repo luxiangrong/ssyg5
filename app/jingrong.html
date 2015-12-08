@@ -144,9 +144,8 @@
         <img src="images/p04.png" height="396" width="1062" alt="">
     </section>
     <section class="cases">
-        <div class="container">
             <div class="row">
-                <div class="col-xs-4 case">
+                <div class="col-xs-4 col-lg-3 col-md-4 case">
                     <div class="padding-patch">
                         <div class="wrap">
                             <a href="" class="size"><img class="" src="images/j03.jpg" alt=""><i class="middle"></i></a>
@@ -154,7 +153,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-4 case">
+                <div class="col-xs-4 col-lg-3 col-md-4 case">
                     <div class="padding-patch">
                         <div class="wrap">
                             <a href="" class="size"><img class="" src="images/j04.jpg" alt=""><i class="middle"></i></a>
@@ -162,7 +161,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-4 case">
+                <div class="col-xs-4 col-lg-3 col-md-4 case">
                     <div class="padding-patch">
                         <div class="wrap">
                             <a href="" class="size"><img class="" src="images/j05.jpg" alt=""><i class="middle"></i></a>
@@ -170,7 +169,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-4 case">
+                <div class="col-xs-4 col-lg-3 col-md-4 case">
                     <div class="padding-patch">
                         <div class="wrap">
                             <a href="" class="size"><img class="" src="images/j03.jpg" alt=""><i class="middle"></i></a>
@@ -178,7 +177,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-4 case">
+                <div class="col-xs-4 col-lg-3 col-md-4 case">
                     <div class="padding-patch">
                         <div class="wrap">
                             <a href="" class="size"><img class="" src="images/j04.jpg" alt=""><i class="middle"></i></a>
@@ -186,7 +185,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-4 case">
+                <div class="col-xs-4 col-lg-3 col-md-4 case">
                     <div class="padding-patch">
                         <div class="wrap">
                             <a href="" class="size"><img class="" src="images/j05.jpg" alt=""><i class="middle"></i></a>
@@ -194,7 +193,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
         </div>
     </section>
     <footer>
@@ -319,6 +317,23 @@
         });
 
         $('.icon').corner('73px');
+
+
+        var rate = $('.case .wrap img').width() / $('.case .wrap img').height();
+        var calcSize = function() {
+            
+
+            var w = $('.case').width();
+            var h = w / rate;
+
+            $('.case').each(function(i,item){
+                $(this).find('.wrap').width(w - 20).height(h - 20);
+                $(this).find('.wrap img').width(w - 20).height(h-20);
+            });
+        };
+        $(window).on('resize', calcSize);
+        calcSize();
+        
 
     });
     </script>
